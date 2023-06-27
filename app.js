@@ -6,6 +6,12 @@ app.get("/main/:message?", function (req, res) {
     res.sendFile(__dirname + "/index.html", {message:req.message});
 });
 
+app.get("/testJson",function(req,res){
+    res.json({
+        number: 1
+    });
+});
+
 //If there's no match it redirects to /main
 app.all('*', function(req, res) {
     res.redirect('/main/owo')
