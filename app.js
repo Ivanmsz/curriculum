@@ -6,7 +6,7 @@ app.get("/main/:message?", function (req, res) {
     res.sendFile(__dirname + "/index.html", {message:req.message});
 });
 
-app.get("/testJson",function(req,res){
+app.get("/main/testJson",function(req,res){
     res.json({
         number: 1
     });
